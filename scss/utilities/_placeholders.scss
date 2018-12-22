@@ -1,0 +1,31 @@
+//placeholders
+
+
+// Links
+// Images
+// Headlines
+// Nav items
+
+//Placeholders
+// Used to set container width
+
+%grid {
+  width: $width;
+  @include box;
+}
+
+%link {
+  text-decoration: none;
+}
+
+%image {
+  display: inline-block;
+  text-align: center;
+  padding-bottom: $gutter;
+}
+
+%nav {
+  width: $width;
+  padding-left: 0;
+  padding-top: $gutter2;
+}

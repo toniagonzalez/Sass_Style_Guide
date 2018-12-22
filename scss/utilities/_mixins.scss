@@ -1,0 +1,141 @@
+//mixins
+
+//--------General --------///////
+@mixin container {
+  color: $color-text;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: $font-stack-primary;
+  text-align: left;
+  margin: 0;
+  margin-right: $margin;
+  margin-left: $margin;
+  max-width: $width;
+}
+
+
+@mixin caps {
+  text-transform: $caps;
+  font-weight: bold;
+}
+
+@mixin box {
+  box-sizing: border-box;
+}
+
+
+//--------button/grid styling-------////////
+
+@mixin btn {
+  border: none;
+  text-align: center;
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 $gutter $gutter;
+  border-radius: 5px;
+  @extend %grid;
+}
+
+//--------Flexbox Settings/////////
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin col{
+  display: flex;
+  flex-direction: column;
+}
+
+/// Flex Row Alignment
+@mixin justcenter {
+  justify-content: center;
+}
+@mixin juststart {
+  justify-content: flex-start;
+}
+@mixin justaround {
+  justify-content: space-around;
+}
+@mixin justend {
+  justify-content: flex-end;
+}
+@mixin justbtw {
+  justify-content:space-between;
+}
+
+//Flex Column Alignment
+@mixin aligncenter {
+  align-content: center;
+}
+@mixin alignend {
+  align-content: flex-end;
+}
+@mixin alignstart {
+  align-content: flex-start;
+}
+@mixin alignaround {
+  align-content: space-around;
+}
+@mixin alignbtw {
+  align-content: space-between;
+}
+
+
+//--------- Media Query --------///////
+
+
+@mixin mq {
+  @media (min-width: map-get($breakpoints, 'desktop'))  {
+  @include row;
+  @include justcenter;
+  align-items: $start;
+  .nav{
+    @include row;
+    width: $width;
+    @include justbtw;
+     .nav__item {
+       margin-right: $margin;
+       padding-right: $gutter;
+       padding-left: $gutter;
+       &:hover {
+      }
+     }
+    }
+  .grid__col--4,
+  .grid__col--5 {
+    width: $grid-width-row; //form col--4
+    text-align: center;
+    .headline--secondary {
+      text-align: left;
+    }
+  }
+  .grid__col--8,
+  .grid__col--7 {
+    width: grp($width, $grid-width-row); //typography col-8
+    text-align: center;
+    .headline--secondary {
+      text-align: left;
+    }
+    .card {
+      margin-right: $margin;
+    }
+  }
+  .grid__col--12 {
+    flex: 2; //buttons
+  }
+  .grid__col--3 {   //logo
+    @include row;
+    width: $grid-width-row;
+    @include justcenter;
+  }
+    .grid__col--6 {
+      width: 50%;
+      @include justbtw;
+      text-align: center;
+  }
+ }
+}

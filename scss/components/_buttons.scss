@@ -1,0 +1,10 @@
+//buttons
+
+
+//Button background colors
+
+@each $theme, $color in $themes {
+    .#{$theme}.theme__colors {
+    background-color: $color;
+  }
+}

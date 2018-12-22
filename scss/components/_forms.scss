@@ -1,0 +1,17 @@
+//  Forms:
+//  .form
+//  .form__label--hidden
+//  .form__input
+
+.form {
+  margin-top: $gutter2;
+  box-sizing: border-box;
+  width: $form-width;
+  height: auto;
+  @include box;
+  .img--avatar {
+    width: $avatar;
+    margin-left: form($form-width, $avatar);
+    margin-right: form($form-width, $avatar);
+  }
+}

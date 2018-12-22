@@ -1,0 +1,63 @@
+//===============
+//variables
+//===============
+
+$color-primary: #66ffd9;
+$color-secondary:  #4dd2ff;
+
+$color-text: hsl(0, 0%, 60%);
+$white: #fff;
+
+
+// //fonts
+
+$font-stack-primary: 'Helvetica Neue', san-serif;
+$font-stack-secondary: 'Helvetica Neue', san-serif 'Arial', san-serif;
+$font-button: 'Proxima Nova soft', san-serif;
+$caps: uppercase;
+$bold: bold;
+
+
+
+
+//layout
+$gutter: 10px;
+$gutter2: 20px;
+$width: 90%;
+$row-width: 45%;
+$grid-width-row: 33%;
+$form-width: 100%;
+$margin: 5%;
+$avatar: 50%;
+
+//flex
+$around: space-around;
+$center: center;
+$start: flex-start;
+$end: flex-end;
+
+
+
+// //btn theme__colors map
+$themes: (
+  'btn--default': hsl(195, 100%, 65%), //aqua
+  'btn--success': hsl(120, 50%, 60%), //green
+  'btn--error': hsl(0, 100%, 70%),    //red
+  'btn--warning': hsl(24, 100%, 55%), //orange
+  'btn--info': hsl(260, 100%, 65%), //purple
+  'grid__col--12': hsl(165, 100%, 80%),  //aqua light
+  'grid__col--6': hsl(195, 100%, 50%), //blue light
+  'grid__col--4': hsl(195, 100%, 80%), //aqua light
+  'grid__col--7': hsl(0, 100%, 85%),  //red light
+  'grid__col--8': hsl(24, 100%, 75%), //orange light
+  'grid__col--3': hsl(260, 100%, 85%), //purple light
+  'grid__col--5': hsl(120, 50%, 80%), //green light
+);
+
+
+
+// $breakpoints
+
+$breakpoints: (
+  'desktop': 769px,
+)

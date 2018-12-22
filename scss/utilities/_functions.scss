@@ -1,0 +1,29 @@
+// functions
+
+
+
+// Button colors
+
+//    .btn--default
+//    .btn--success
+//    .btn--error
+//    .btn--warning
+//    .btn--info
+//    .theme__colors
+//
+
+@function background($themes, $colors) {
+  @if map-has-key($themes, $colors) {
+    @return map-get($themes, $colors);
+  }
+}
+
+
+
+@function grp($width, $grid-width-row) {
+  @return (($width - $grid-width-row) + $margin);
+}
+
+@function form($form-width, $avatar) {
+  @return (($form-width - $avatar) / 2);
+}

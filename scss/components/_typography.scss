@@ -1,0 +1,36 @@
+//typography
+//  Typography:
+// .container
+//  .link
+//  .blockquote
+//  .headline--primary
+//  .headline--secondary
+
+
+.headline--primary {
+  color: $color-primary;
+  line-height: 1em;
+  margin-left: $gutter;
+  text-align: left;
+}
+
+.headline--secondary {
+  padding-top: $gutter2;
+  padding-bottom: $gutter;
+  font-family:  $font-stack-secondary;
+  font-weight: 400;
+}
+
+.link {
+  color: $color-secondary;
+  @extend %link;
+}
+
+.blockquote {
+  border-left: 8px solid $color-primary;
+  text-align: left;
+  font-family: $font-stack-primary;
+  font-style: italic;
+  font-size: 1.5em;
+  padding-left: $gutter;
+}

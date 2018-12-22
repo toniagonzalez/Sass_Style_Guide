@@ -1,0 +1,57 @@
+//  Grid
+
+
+.container {
+  @include container;
+}
+
+.grid__row {
+  @include col;
+  align-items: center;
+  margin-bottom: $gutter2;
+  @include mq;
+}
+
+// Style for Buttons Section
+
+.grid__col--12 {
+  @extend %grid;
+  @include mq;
+  button{
+    @include btn;
+    color: $white;
+    @include caps;
+ }
+}
+
+// Styles for Grid System
+
+.grid__col,
+.theme__colors {
+  @include btn;
+  text-align: left;
+  padding-left: $gutter;
+  font-weight: $bold;
+}
+
+// Styles for Form buttons
+
+.grid__col--4 {
+  @extend %grid;
+  .form__input{
+    @include btn;
+    border-bottom: 3px solid $color-primary;
+    border-radius: none;
+    text-align: left;
+    font-family: $font-stack-secondary;
+    font-weight: $bold;
+  }
+  .btn--default{
+    color: $white;
+    text-align: center;
+    @include caps;
+  }
+  .form__label--hidden {
+    visibility: hidden;
+  }
+}

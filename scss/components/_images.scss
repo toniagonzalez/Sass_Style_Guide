@@ -1,0 +1,22 @@
+//images
+//    Image:
+//    .img--logo
+//    .img--frame
+//    .img--avatar
+
+
+
+.img--frame {
+  display: inline-block;
+  border: .5px solid $color-text;
+  padding: $gutter;
+  margin-bottom: $margin;
+  max-width: $width;
+  height: auto;
+}
+
+.img--avatar {
+  @extend %image;
+  max-width: $width;
+  height: auto;
+}

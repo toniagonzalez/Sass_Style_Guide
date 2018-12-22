@@ -1,0 +1,14 @@
+//Basic Styles
+
+* {
+   .container {
+     @include col;
+     @include aligncenter;
+     @include box;
+   }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
